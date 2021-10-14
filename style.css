@@ -1,0 +1,37 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.headlineBox {
+    padding: 2vmin;
+}
+
+.expandButton {
+    font-size: 4vmin;
+    display: inline-block;
+    background-color: white;
+    margin-bottom: 0.5vmin;
+    padding: 2vmin;
+    width: 50vmin;
+    height: 9vmin;
+    text-align: left;
+    border: none;
+    border-top: 0.3vmin black solid;
+    cursor: pointer;
+}
+
+.expandButton img {
+    height: 3vmin;
+    float: right;
+    padding-top: 1vmin;
+}
+
+.expandableProfileContent {
+    padding: 2vmin;
+}
+
+.webDevItem {
+    width: 70vmin;
+    padding: 2vmin;
+    border: 0.3vmin lightgrey solid;
+}

@@ -1,7 +1,113 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Dexter Stacey</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+    </head>
+
     <body>
+        
+        <!-- Script to hide/show content of div areas, plus change button arrow type-->
+        <script>
+            function showHideContent(divName, btnName) {
+            let content = document.getElementById(divName);
+            let button = document.getElementById(btnName)
+            if (content.style.display === "none") {
+              content.style.display = "block";
+              button.src = "uparrow.png";
+            } else {
+              content.style.display = "none";
+              button.src = "downarrow.png";
+            }
+          } 
+        </script>
+
+        <!-- Headline Box-->
+        <div class="headlineBox">
         <h1>Dexter Stacey</h1>
-        <p>This is working.</p>
+        <p></p>
+        </div>
+
+        <!-- Web Development Content-->
+        <button class="expandButton" onclick="showHideContent('webDev', 'webDevButton')">Web Development <img id="webDevButton" src="downarrow.png"></button>
+
+        <div id="webDev" class="expandableProfileContent" style="display: none";>
+            <div class="webDevItem">
+                <h2>Reframe.network</h2>
+                <p>I built a profile site called <a href="https://www.reframe.network"> Reframe</a> that showcases the work of refugee-led organisations and helps them connect with donors. It's built using the LAMP stack and hosted on an AWS EC2 instance.</p>
+                <p><b>Front-end Tech Used: </b>Javascript, HTML, CSS</p>
+                <p><b>Back-end Tech Used: </b>PHP, MariaDB, Apache, virtual Debian instance on Amazon EC2.</p>
+            </div>
+        </div>
+        <br />
+
+
+        <!-- Work With Refugees Content-->
+        <button class="expandButton" onclick="showHideContent('refugees', 'refugeesButton')">Work with Refugees <img id="refugeesButton" src="downarrow.png"></button>
+
+        <div id="refugees" class="expandableProfileContent" style="display: none";>
+            <p>Since 2014 I have worked with <a href="https://www.xavierproject.org">Xavier Project</a>, a charity based in East Africa that supports refugee-led organisations.</p>
+            <p>As well as creating the Reframe website, I have led the development of Xavier Project's overall operational model which enfranchises refugees to lead the international aid and development process in their communities. So far this model has helped 20 RLOs reach more funding from international actors and deliver better quality projects to over 12,000 children and adults.</p>
+            <h3>Competencies</h3>
+            <ul>
+                <li>Monitoring and Evaluation (MEL), including designing and running RCTs and analyzing data.</li>
+                <li>Proposal Development, Fundraising, and Partnership Management (£500k raised personally).</li>
+                <li>Leadership and Strategic Planning at the whole-organisation level.</li>
+            </ul>
+        </div>
+        
+
+        <br />
+        <!-- Writing Content-->
+        <button class="expandButton" onclick="showHideContent('writing', 'writeButton')">Writing <img id="writeButton" src="downarrow.png"></button>
+
+        <div id="writing" class="expandableProfileContent" style="display: none";>
+            <p>I enjoy writing of all kinds, from fiction to copywriting:</p>
+            <ul>
+                <li>I have a <a href="https://www.amazon.co.uk/Unmarked-Journey-Book-1-ebook/dp/B00G7POXLO">sci-fi trilogy</a> on Amazon, and I'm currently working on another novel.</li>
+                <li>A horror short story of mine was featured in <a href="https://www.goodreads.com/book/show/25285397-the-nightmare-collective">The Nightmare Collective</a> short story collection.</li>
+            </ul>
+                 
+        </div>
+
+        <br />
+        <!-- Photography Content-->
+        <button class="expandButton" onclick="showHideContent('photos', 'photoButton')">Photography <img id="photoButton" src="downarrow.png"></button>
+
+        <div id="photos" class="expandableProfileContent" style="display: none";>
+            <p>Another passion of mine that I've been lucky enough to have been paid for on occassion. I have professionally photographed 3 weddings and have done a photo piece on Yad Vashem Holocaust Museum in Jerusalem for <i>Le Visiteur</i> Magazine.</p>
+            <h3><a href="./gallery.html">Click here to see my photo gallery</a> (and some front-end design skills)</h3>
+            <p>My photography experience means I'm very handy with <b>Adobe Photoshop</b> and <b>Lightroom</b>.</p>
+        </div>
+
+        <br />
+        <!-- Video Content-->
+        <button class="expandButton" onclick="showHideContent('videos', 'filmButton')">Filmmaking <img id="filmButton" src="downarrow.png"></button>
+
+        <div id="videos" class="expandableProfileContent" style="display: none";>
+            <p>Hand-in-hand with my interest in photography comes filmmaking. In fact, at university (UCL) I was President of the Film and TV Society. While I haven't made a fictional short film in a long time, I've been keeping the interest alive by making videos for organizations. Here is some of my best stuff:</p>
+            <ul>
+                <li><a href="https://youtu.be/UhqBoe7cdtY">A video application on behalf of Xavier Project on our refugee-led approach</a> that won the 2019 UNHCR Innovation Award.</li>
+                <li>A general <a href="https://www.youtube.com/watch?v=rOQ2jFhPgRs">promotional video</a> for Xavier Project.</li>
+                <li>A dark, minimalist short film, <a href="https://youtu.be/kmej-YHcy2Q"><i>The Foundation</i></a>, published in 2013.</li>
+                <li>A sci-fi short film, <a href="https://www.youtube.com/watch?v=r2lGUUOegOg"><i>Siren Syndrome</i></a>, that was shortlisted for the 2011 Campus Movie Fest in London.</li>
+                <li>A <a href="https://www.youtube.com/watch?v=Jny_cTvgKYo">trailer for <i>Erebus</i></a>, a feature-length sci-fi film project that was never finished.</li> 
+            </ul>
+        </div>
+
+        <br />
+        <!-- Music Content-->
+        <!--
+        <button class="expandButton" onclick="showHideContent('music', 'musicButton')">Music <img id="musicButton" src="downarrow.png"></button>
+
+        <div id="music" class="expandableProfileContent" style="display: none";>
+            <p>Music Content</p>
+        </div>
+        -->
+
+
     </body>
 </html>
